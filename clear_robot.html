@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,minimal-ui" />
+    <link href="http://www.qlcoder.com//uploads/145620041535888.png" type="image/x-icon" rel=icon>
+    <title></title>
+    <link href="http://www.qlcoder.com/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container main"   onkeydown="DoKeyDown(event)" tabIndex="-1" style="position:relative;outline:none;">
+    <div style="">
+        现在的level:<span id="curlevel">1</span>
+        <br>
+        <input type="button" value="重玩本关" onclick="NextLevel(0)">
+        <br>
+        <div id="msg"></div>
+        <input id="level" type="hidden" value="0">
+        <input type="button" value="游戏说明" onclick="DoHelp()">
+        <input type="button" value="上一关" onclick="NextLevel(-1)">
+        <input type="button" value="下一关" onclick="NextLevel(1)">
+
+    </div>
+     <!--对canvas 添加position属性,不然FF下机器人定位出错 -->
+    <canvas id="myCanvas" style="position:relative;">你的浏览器还不支持哦</canvas>
+    <img id="block" src="http://www.qlcoder.com//img/block.png" style="display:none;">
+    <img id="wall" src="http://www.qlcoder.com//img/wall.png" style="display:none;">
+    <img id="ball" src="http://www.qlcoder.com//img/ball.png" style="display:none;">
+    <img id="box" src="http://www.qlcoder.com//img/box.png" style="display:none;">
+    <img id="gray_u" src="http://www.qlcoder.com//img/gray_5.png" style="display:none;">
+    <img id="gray_r" src="http://www.qlcoder.com//img/gray_6.png" style="display:none;">
+    <img id="gray_l" src="http://www.qlcoder.com//img/gray_6.png" style="display:none;">
+    <img id="gray_d" src="http://www.qlcoder.com//img/gray_5.png" style="display:none;">
+    <img id="gray_ul" src="http://www.qlcoder.com//img/gray_1.png" style="display:none;">
+    <img id="gray_ur" src="http://www.qlcoder.com//img/gray_2.png" style="display:none;">
+    <img id="gray_dl" src="http://www.qlcoder.com//img/gray_3.png" style="display:none;">
+    <img id="gray_dr" src="http://www.qlcoder.com//img/gray_4.png" style="display:none;">
+    <img id="pleft" src="http://www.qlcoder.com//img/left.png" style="display:none;">
+    <img id="pright" src="http://www.qlcoder.com/img/right.png" style="display:none;">
+    <img id="pup" src="http://www.qlcoder.com//img/up.png" style="display:none;">
+    <img id="pdown" src="http://www.qlcoder.com//img/down.png" style="display:none;">
+</div>
+</body>
+<script src="http://www.qlcoder.com//js/jquery.min.js"></script>
+<script src="http://www.qlcoder.com//js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/mapdata100.js"></script>
+<script type="text/javascript" src="js/robot.js?v=1.1"></script>
+<script type="text/javascript">
+    NextLevel(0);
+</script>
+</html>
+
+
