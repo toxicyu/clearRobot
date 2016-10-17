@@ -106,8 +106,9 @@ function initLevel()
     curMap=copyArray(levels[iCurLevel]);
     CurLevel=copyArray(levels[iCurLevel]);
     curMan=pdown;
-    myCanvas.setAttribute("width",(CurLevel.length+10)*(w+1));
-    myCanvas.setAttribute("height",(CurLevel[0].length+10)*(h+1));
+    //初始化的时候顺便重置canvas的宽高
+    myCanvas.setAttribute("width",(CurLevel.length+1)*w);
+    myCanvas.setAttribute("height",(CurLevel[0].length)*h);
     InitMap();
     DrawMap(curMap);
 
